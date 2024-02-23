@@ -1,4 +1,5 @@
 # import tkinter as tk
+from ViewModels.FileViewModel import FileViewModel
 from Views.MainWindow import MainWindow
 from Views.MainView import MainView
 

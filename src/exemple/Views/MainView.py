@@ -4,7 +4,7 @@ from context import BaseView
 from Views.MainWindow import MainWindow
 
 
-class MainView(BaseView.BaseView):
+class MainView(BaseView):
     theme:bool # true -> Light, False -> dark
     ### Tkinter components, these need to be reset on reset() call
     __label: Optional[Label]  # privated (can still be accessed via name mangling)

@@ -1,9 +1,9 @@
 from tkinter import Tk
 from typing import Optional
 from abc import ABC
-from mvvm.Bases.BaseView import BaseView
+from mvvm.Bases.base_view import BaseView
 
-from mvvm.Bases.BaseViewModel import BaseViewModel
+from mvvm.Bases.base_view_model import BaseViewModel
 
 class BaseWindow(Tk,BaseView,ABC):
 
@@ -22,9 +22,10 @@ class BaseWindow(Tk,BaseView,ABC):
     def show(self,view: 'BaseView', **viewParams):
         childs = self.winfo_children()
         for child in childs:
-            child.destroy()
-            if self.__current_view is not None:
-                self.__current_view.reset()
+            child.pack_forget()
+
+        if self.__current_view is not None:
+            self.__current_view
         view.display(window=self,kwargs=viewParams)
         self.__current_view = view
 
@@ -38,3 +39,4 @@ class BaseWindow(Tk,BaseView,ABC):
 
     def display(self, window: 'BaseWindow', **kwargs):
         """this has no effects"""
+    

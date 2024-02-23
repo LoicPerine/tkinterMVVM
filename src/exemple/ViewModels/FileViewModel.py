@@ -1,7 +1,7 @@
 from context import BaseViewModel, reactive_property
 from Models.FileModel import FileModel
 
-class FileViewModel(BaseViewModel.BaseViewModel[FileModel]):
+class FileViewModel(BaseViewModel[FileModel]):
     
     __demo: str =""
     def __init__(self) -> None:

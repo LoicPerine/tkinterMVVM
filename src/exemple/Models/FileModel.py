@@ -1,5 +1,5 @@
 from context import BaseModel
 
 
-class FileModel(BaseModel.BaseModel):
+class FileModel(BaseModel):
     pass
