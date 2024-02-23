@@ -1,9 +1,7 @@
-from Decorators.reactive_property import reactive_property
-# from Models.FileModel import FileModel
-from Bases.BaseViewModel import BaseViewModel
+from context import BaseViewModel, reactive_property
+from Models.FileModel import FileModel
 
-
-class FileViewModel(BaseViewModel):
+class FileViewModel(BaseViewModel.BaseViewModel[FileModel]):
     
     __demo: str =""
     def __init__(self) -> None:
@@ -17,4 +15,6 @@ class FileViewModel(BaseViewModel):
     @demo.setter
     def set_demo(self,value:str):
         self.__demo = value
-
+    
+    def display(self):
+        pass

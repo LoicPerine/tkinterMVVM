@@ -1,7 +1,7 @@
 from collections.abc import Callable
 from typing import Any
 
-from Bases.BaseViewModel import BaseViewModel
+from mvvm.Bases.BaseViewModel import BaseViewModel
 
 
 class reactive_property(property):
