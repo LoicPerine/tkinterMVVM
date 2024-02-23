@@ -15,7 +15,7 @@ class MainView(BaseView):
         super().__init__()
         self.theme = True # light theme by default 
 
-    def display(self,window: MainWindow,**kwargs):
+    def create_widgets(self,window: MainWindow,**kwargs):
         window.rowconfigure(7)
         window.columnconfigure(21)
         self.__label = Label(window, text="henlo friendo, what should we do?")

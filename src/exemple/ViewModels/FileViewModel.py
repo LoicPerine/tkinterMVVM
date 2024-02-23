@@ -1,7 +1,6 @@
 from context import BaseViewModel, reactive_property
-from Models.FileModel import FileModel
 
-class FileViewModel(BaseViewModel[FileModel]):
+class FileViewModel(BaseViewModel):
     
     __demo: str =""
     def __init__(self) -> None:
@@ -16,5 +15,5 @@ class FileViewModel(BaseViewModel[FileModel]):
     def set_demo(self,value:str):
         self.__demo = value
     
-    def display(self):
+    def create_widgets(self):
         pass

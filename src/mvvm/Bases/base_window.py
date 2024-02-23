@@ -5,7 +5,7 @@ from mvvm.Bases.base_view import BaseView
 
 from mvvm.Bases.base_view_model import BaseViewModel
 
-class BaseWindow(Tk,BaseView,ABC):
+class BaseWindow(Tk,ABC):
 
     __current_view: Optional[BaseViewModel]
 
@@ -26,7 +26,7 @@ class BaseWindow(Tk,BaseView,ABC):
 
         if self.__current_view is not None:
             self.__current_view
-        view.display(window=self,kwargs=viewParams)
+        view.create_widgets(window=self,kwargs=viewParams)
         self.__current_view = view
 
     
@@ -37,6 +37,4 @@ class BaseWindow(Tk,BaseView,ABC):
         for child in super(Tk).winfo_children():
             child.pack_forget()
 
-    def display(self, window: 'BaseWindow', **kwargs):
-        """this has no effects"""
     
