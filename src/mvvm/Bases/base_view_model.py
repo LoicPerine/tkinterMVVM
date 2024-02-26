@@ -5,7 +5,7 @@ from mvvm.observable_list import ObservableList
 
 
 class BaseViewModel(ABC):
-    __ui_reactive_properties: list[str] =[]
+    _ui_reactive_properties: list[str] =[]
     __prop_bindings:dict[str,list[Callable[[Self,Any],None]]]
 
     def __init__(self) -> None:
