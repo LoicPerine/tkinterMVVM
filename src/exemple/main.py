@@ -1,8 +1,9 @@
-# import tkinter as tk
+import tkinter as tk
 from ViewModels.FileViewModel import FileViewModel
 from Views.MainWindow import MainWindow
 from Views.MainView import MainView
-window = MainWindow()
-mainView = MainView()
-window.show(mainView)
-window.mainloop()
+def listener(source:FileViewModel, value:str):
+    print("let's goooo")
+test = FileViewModel()
+test.bind_property("demo",listener)
+test.demo = 10
